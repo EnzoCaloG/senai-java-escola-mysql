@@ -1,10 +1,8 @@
 package com.senai.escola.Service;
 
-
 import com.senai.escola.Interface.UsuarioRepository;
 import com.senai.escola.Models.Usuario;
 import org.springframework.stereotype.Service;
-
 
 @Service
 public class UsuarioService {
@@ -14,14 +12,12 @@ public class UsuarioService {
         this.repository = repository;
     }
 
-
     public Usuario fazerLogin(String username, String senha) {
-        return repository.findByUserNameAndSenha(username, senha).orElse(null);
+        return repository.findByUsernameAndSenha(username, senha).orElse(null);
     }
 
-    public Usuario salvarUser(Usuario usuario) {
+    public Usuario salvarUsuario(Usuario usuario) {
         return repository.save(usuario);
     }
-
 
 }
