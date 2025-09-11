@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const apiUrl = 'http://localhost:8080/alunos';
+  const apiUrl = 'http://localhost:8080/aluno';
   const tbody = document.getElementById('aluno-tbody');
   const form = document.getElementById('aluno-form');
   const alunoId = document.getElementById('aluno-id');
@@ -20,13 +20,17 @@ document.addEventListener('DOMContentLoaded', () => {
             <td>${aluno.email}</td>
             <td>${aluno.telefone}</td>
             <td>
+
               <button class="btn btn-warning btn-sm me-2"
                 onclick="editarAluno(${aluno.id}, '${aluno.nome}', '${aluno.email}', '${aluno.telefone}')">
                 Editar
+
               </button>
               <button class="btn btn-danger btn-sm" onclick="excluirAluno(${aluno.id})">
-                Excluir
+                Excluir Aluno
+                <i class="fa fa-trash" aria-hidden="true"></i>
               </button>
+
             </td>
           `;
           tbody.appendChild(tr);

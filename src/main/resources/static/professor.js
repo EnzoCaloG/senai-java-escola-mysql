@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const apiUrl = 'http://localhost:8080/professor';
+  const apiUrl = 'http://localhost:8080/professores';
   const tbody = document.getElementById('professor-tbody');
   const form = document.getElementById('professor-form');
   const professorId = document.getElementById('professor-id');
@@ -25,7 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 Editar
               </button>
               <button class="btn btn-danger btn-sm" onclick="excluirProfessor(${prof.id})">
-                Excluir
+                Excluir Professor
+                <i class="fa fa-trash" aria-hidden="true"></i>
               </button>
             </td>
           `;
